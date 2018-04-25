@@ -8,4 +8,6 @@ RUN apt-get update && apt-get install -y apt-transport-https \
 && apt-get update \
 && apt-get install -y powershell curl jq kubectl docker.io \
 && usermod -aG docker gitlab-runner \
-&& apt-get clean
+&& apt-get clean \
+&& curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose \
+&& chmod +x /usr/bin/docker-compose
