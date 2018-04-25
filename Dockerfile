@@ -7,9 +7,5 @@ RUN apt-get update && apt-get install -y apt-transport-https \
 && echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list \
 && apt-get update \
 && apt-get install -y powershell curl jq kubectl docker.io \
-&& apt-get install -y python-setuptools python-dev build-essential \
-&& easy_install pip \
-&& pip install awscli \
-&& apt-get install -y ansible \
 && usermod -aG docker gitlab-runner \
 && apt-get clean
